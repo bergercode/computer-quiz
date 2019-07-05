@@ -1,0 +1,253 @@
+/* CSS for learning page of website.  */
+
+section {
+  min-height: 100vh;
+  background:rgb(72,85,99);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackboard {
+  z-index: 0;
+  margin-top: 1em;
+  text-align: left;
+  line-height: 2em;
+  width: 75%;
+  font-size: 2em;
+}
+
+.blackboard p::first-letter{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.blackboard img {
+  position: fixed;
+  left: 0;
+  bottom:0;
+  width:17vw;
+}
+
+/* prompt for user to scroll down to continue */
+#scroll-down {
+  font-size: 1.5em;
+  padding-top: 0.5em;
+  text-align: center;
+  height:10vh;
+  color:white;
+  display: inline-block;
+  position: relative;
+  animation:bounce 1s infinite linear;
+}
+
+/* #learning is entire learning section made up of  */
+/* #components and #information (panel) */
+
+#learning{
+  color:white;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#learning ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:100%;
+  width: 100%;
+}
+
+#learning li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height:16%;
+}
+
+#learning ul:nth-of-type(1){
+  align-items: center;
+}
+
+#learning ul:nth-of-type(1) a {
+  background:rgba(150,150,150,0.8);
+  padding: 0 1em;
+  box-shadow: inset 0 -3px 0 0 rgba(10,10,10,1), 2px 0 5px 0 rgba(10,10,10,1);
+  border-radius: 0.5em;
+}
+
+#learning ul:nth-of-type(1) a:hover{
+  box-shadow: inset 2px 0 10px black;
+  background:white;
+}
+
+.active {
+  box-shadow: inset 2px 0 10px black !important;
+  background:white !important;
+}
+
+.parts-label {
+  font-size: 1.2em;
+  font-family: 'Acme', sans-serif;
+  position:fixed;
+  top:1em;
+  opacity:0;
+  transition: 0.5s;
+}
+
+#components {
+  font-size: 1.5em;
+  background-color:rgb(49,52,58);
+  border-radius: 0.5em;
+  border: 10px solid rgba(202,164,114,1);
+  width:30%;
+  height:75vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 2px 3px 10px black;
+}
+
+#components a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:100%;
+  width: auto;
+  cursor: pointer;
+}
+
+#components img {
+  width:100px;
+  height: 70px;
+}
+
+#information {
+  position: relative;
+  box-shadow: 2px 3px 10px black;
+  background-color:rgb(73,121,89);
+  border-radius: 0.5em;
+  border: 10px solid rgba(202,164,114,1);
+  width:30%;
+  min-height:75vh;
+  font-size: 1.5em;
+}
+
+
+#information div {
+  padding:0.5em;
+  transition: 1s;
+}
+
+/* Takes user to quiz */
+#quiz-link{
+  text-transform: uppercase;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 5%;
+  color:white;
+  text-decoration: none;
+  background: rgb(220,50,50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border:1px solid red;
+  height: 100px;
+  width: 100px;
+  box-shadow: inset 0 -3px 0 0 rgba(10,10,10,1), 2px 0 5px 0 rgba(10,10,10,1);
+}
+
+#quiz-link:hover {
+  cursor: pointer;
+  color:rgba(150,150,150,1);
+  box-shadow: inset 2px 0 10px black
+}
+
+.information{
+  opacity: 0;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.information img {
+  position: relative;
+  text-align: center;
+  padding-top: 1em;
+  width:120px;
+}
+
+.info-image {
+  text-align: center;
+}
+
+.show{
+  opacity: 1;
+}
+
+.hide{
+  opacity: 0;
+}
+
+/* Modify modal */
+#home-modal {
+  font-size: 1.5em;
+  color:white;
+  z-index: 1;
+  position: fixed;
+  left:38%;
+  top:30%;
+  margin: auto;
+  text-align: center;
+  height:200px;
+}
+
+#home-modal h3 {
+
+}
+
+#modal-cancel {
+  background:red;
+  position:absolute;
+  right:2em;
+}
+
+#modal-submit {
+  position: absolute;
+  left:2em;
+}
+
+/* ********************MEDIA QUERIES******************** */
+
+@media (max-width:1200px) {
+  #components{
+    font-size:1.2em;
+  }
+  #home-modal {
+    left:33%;
+  }
+}
+@media (min-width:1200px) and (min-height:720px){
+  .information img{
+    padding-top:5em;
+    width:150px;
+  }
+  .parts-label {
+    top:1.5em;
+  }
+}
+
+@media (max-width:900px){
+  #components {
+    width:35%;
+  }
+}
+
+@keyframes bounce {
+  0%   {top:0px;}
+  50%  {top:25px;}
+  100% {top:0px;}
+}

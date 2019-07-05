@@ -1,0 +1,248 @@
+/* This is the master css file and give basic style for whole site */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+  height: 100%;
+  width:100%;
+}
+
+body {
+  /* font-family: 'Bubblegum Sans', cursive; */
+  font-family: 'Acme', sans-serif;
+  font-weight: normal;
+  position: relative;
+  background:rgb(72,85,99);
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  top:0;
+  height:80px;
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  padding: 2em 2em 0.5em;
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  padding: 0.5em;
+  z-index: 1;
+}
+
+nav a {
+  min-width: 150px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color:white;
+  padding:0.5em;
+  text-decoration: none;
+  background:orange;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  box-shadow: inset 0 -3px 0 0 rgba(10,10,10,0.8), 0 0 5px 0 rgba(10,10,10,0.8);
+}
+
+nav a:hover {
+  box-shadow: inset 0 0 10px black;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+input:focus {
+  /* background:rgb(20,110,110); */
+  /* border:1px solid red; */
+  box-shadow: 0 0 20px yellow;
+}
+
+a:focus {
+  box-shadow: inset 0 0 10px black;
+}
+
+.page-overview {
+  font-size: 1.1em;
+  background:rgb(72,85,99);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackboard{
+  z-index: 0;
+  text-align: center;
+  padding:20px;
+  color:rgba(230,230,230,1);
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width:75%;
+  min-height: 60vh;
+  border: 10px solid rgba(202,164,114,1);
+  border-radius: 0.5em;
+  background-color:rgb(73,121,89);
+  box-shadow: 2px 3px 10px black;
+}
+
+.blackboard img {
+  width: 30vw;
+  position: absolute;
+  bottom: 0;
+  left:0;
+}
+
+.blackboard p {
+  width: 65%;
+}
+
+.highlight {
+  color:rgb(214,217,99);
+}
+
+hr{
+  border:2px solid rgba(214,217,99,0.9);
+  border-radius:10px;
+  margin:0.5em 0;
+}
+
+/* These are my customer pop up windows with mods in relative page css file */
+.modal {
+  display:none;
+  position: fixed;
+  border: 5px solid rgba(202,164,114,1);
+  border-radius: 0.5em;
+  padding:0.5em;
+  height:300px;
+  width: 500px;
+  background:rgb(72,85,99);
+}
+.modal-button {
+  position: absolute;
+  bottom:1em;
+  cursor: pointer;
+  background: green;
+  padding: 0.2em 1em;
+  border-radius:0.5em;
+}
+
+.modal-button:hover{
+  box-shadow: inset 0 -2px 0 0 rgba(10,10,10,0.8), 0 0 4px 0 rgba(10,10,10,0.8);
+}
+
+.modal2 {
+  display:none;
+  position: fixed;
+  border: 5px solid rgba(202,164,114,1);
+  border-radius: 0.5em;
+  padding:0.5em;
+  height:150px;
+  width: 300px;
+  background:rgb(73,121,89);
+}
+
+.modal2 h3 {
+  font-weight: normal;
+  padding-top:1em;
+}
+.modal-cancel {
+  background:rgb(220,50,50);
+  position:absolute;
+  right:2em;
+}
+
+.modal-submit {
+  position: absolute;
+  left:2em;
+}
+
+.close {
+  background:rgb(220,50,50);
+  position:absolute;
+  text-align: center;
+  top:0.5em;
+  right:0.5em;
+  cursor: pointer;
+  padding: 0.1em 0.5em;
+  border-radius: 0.5em;
+  transition: 0.1s;
+}
+
+.close:hover{
+  color:rgb(220,50,50);
+  background:white;
+}
+
+/* For about page */
+
+.go-back {
+  cursor: pointer;
+}
+
+/* ********************ABOUT PAGE CSS******************** */
+
+#about-page {
+  text-align: center;
+  justify-content: space-around;
+  width: 60%;
+  font-size: 1.5em;
+}
+
+#about-page.blackboard {
+  height: 80vh;
+}
+
+#about-page a {
+  color:pink;
+}
+
+#about-page a:visited{
+  color:brown;
+}
+
+#about-page a:hover{
+  color:yellow;
+}
+
+#about-page a:active{
+  color:white;
+}
+
+#references {
+  text-align: left;
+  width: 80%;
+}
+
+/* ********************SOUND CONTROLS******************** */
+
+.mute i {
+  position: relative;
+}
+
+.mute #sound-off {
+  opacity: 0;
+}
+
+/* ********************MEDIA QUERIES******************** */
+
+@media (max-width:1500px) {
+  .blackboard p {
+    width: 80%;
+    font-size:1.2em !important;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+
+}

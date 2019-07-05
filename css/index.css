@@ -1,0 +1,79 @@
+/* CSS for homepage of website */
+
+#begin-button {
+  text-decoration: none;
+  font-size: 1.5em;
+  color:white;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  width:150px;
+  padding: 1em;
+  border-radius: 0.5em;
+  background: green;
+  border:none;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: 'Creepster', cursive;
+  text-shadow: 2px 3px 10px black;
+}
+
+#begin-button:hover{
+  cursor: pointer;
+  box-shadow: inset 0 -3px 0 0 rgba(10,10,10,0.8), 0 0 5px 0 rgba(10,10,10,0.8);
+}
+
+#user-name {
+  text-align: center;
+  font-size:1.5em;
+  width:200px;
+  height:30px;
+  border-radius: 0.5em;
+  border:3px solid black;
+}
+
+#start {
+  letter-spacing: 0.1em;
+  padding: 0.5em;
+  background:green;
+  width:130px;
+  height: 30px;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#start:hover {
+  cursor: pointer;
+  box-shadow: inset 0 -2px 0 0 rgba(10,10,10,0.8), 0 0 4px 0 rgba(10,10,10,0.8);
+}
+
+#computer {
+  z-index: 0;
+  position:absolute;
+  right:10px;
+  bottom: 9%;
+  width: 25vw;
+}
+
+.modal label {
+  font-size:1.5em;
+}
+
+input[type="text"] {
+  font-family: 'Acme', sans-serif;
+}
+
+/* ********************MEDIA QUERIES******************** */
+
+@media (min-width:1200px){
+  .page-overview p {
+    font-size:1.5em;
+  }
+  #computer {
+    width:350px;
+    right: 0;
+  }
+}
