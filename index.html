@@ -17,38 +17,31 @@
   <nav>
     <ul>
       <li><a tabindex="1" href="about.html">About</a></li>
-      <li class="mute"><a tabindex="2"><i id="sound-off" class="fas fa-volume-mute"></i><i id="sound-on" class="fas fa-volume-up"></i></a></li>
     </ul>
   </nav>
-  <iframe src="audio/silent.wav" allow="autoplay" style="display:none">
-  </iframe>
-  <audio autoplay loop>
-    <source src="audio/Game-Menu_v001.wav" type="audio/wav">
-    </audio>
-
-    <main class="page-overview">
-      <section class="blackboard">
-        <img src="images/drIndexToon.png" alt="Dr Frankenstein">
-        <h1>Dr Frankenstein's Computer Quiz</h1>
-        <p>Learn about the main parts of a computer with Dr Frankenstein.</p>
-        <p>For best experience use Chrome or Firefox with an iPad sized screen or larger.</p>
-        <noscript>
-          <p><i class="fas fa-exclamation-triangle"></i> Please enable Javascript to use this website.</p>
-        </noscript>
-        <a tabindex="3" id="begin-button">Play</a>
-        <div class="modal">
-          <div class="close">X</div>
-          <h2 style="font-weight:normal">What is your name?</h2>
-          <div>
-            <input type="text" name="user-name" id="user-name" placeholder="> your name <" maxlength="12">
-          </div>
-          <span></span>
-          <a tabindex="0" id="start">Submit</a>
+  <main class="page-overview">
+    <section class="blackboard">
+      <img src="images/drIndexToon.png" alt="Dr Frankenstein">
+      <h1>Dr Frankenstein's Computer Quiz</h1>
+      <p>Learn about the main parts of a computer with Dr Frankenstein.</p>
+      <p>For best experience use Chrome or Firefox with an iPad sized screen or larger.</p>
+      <noscript>
+        <p><i class="fas fa-exclamation-triangle"></i> Please enable Javascript to use this website.</p>
+      </noscript>
+      <a tabindex="3" id="begin-button">Play</a>
+      <div class="modal">
+        <div class="close">X</div>
+        <h2 style="font-weight:normal">What is your name?</h2>
+        <div>
+          <input type="text" name="user-name" id="user-name" placeholder="> your name <" maxlength="12">
         </div>
-      </section>
-      <img id="computer" src="images/computer.png" alt="Computer">
-    </main>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
-  </html>
+        <span></span>
+        <a tabindex="0" id="start">Submit</a>
+      </div>
+    </section>
+    <img id="computer" src="images/computer.png" alt="Computer">
+  </main>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
