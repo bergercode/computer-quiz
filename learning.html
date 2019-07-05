@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Learning Computer Components</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/learning.css">
+  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a class="return-home" tabindex="1">Home</a></li>
+      <li><a href="about.html" tabindex="2">About</a></li>
+      <li class="mute"><a tabindex="3"><i id="sound-off" class="fas fa-volume-mute"></i><i id="sound-on" class="fas fa-volume-up"></i></a></li>
+    </ul>
+  </nav>
+  <iframe src="audio/silent.wav" allow="autoplay" style="display:none">
+  </iframe>
+  <audio autoplay loop>
+    <source src="audio/Crystal-Caverns.wav" type="audio/wav">
+    </audio>
+    <main class="overview">
+      <div class="modal2" id="home-modal">
+        <h3>You will lose your progress! Are you sure?</h3>
+        <a tabindex="1" class="modal-button modal-submit">Yes</a>
+        <a tabindex="1" class="modal-button modal-cancel">No</a>
+      </div>
+      <section>
+        <div class="blackboard">
+          <img src="images/drExactlyToon.png" alt="Dr Frankenstein talking.">
+          <p>Hello <span id="user-name"></span>! You may call me Dr Frankenstein. I'm a scientist and I need your help. To help me,
+            learn the parts of a Computer and pass a quiz. Then I will be able
+            to bring my monsters, uh, creations to life.
+          </p>
+        </div>
+        <a tabindex="4" href="#learning">
+          <div id="scroll-down">
+            <p>continue..</p>
+            <i class="fas fa-angle-double-down fa-2x"></i>
+          </div>
+        </a>
+      </section>
+      <section>
+        <div id="learning">
+          <aside id="components">
+            <p class="parts-label"><i class="fas fa-arrow-down"></i> Computer Parts <i class="fas fa-arrow-down"></i></p>
+            <ul>
+              <li><a tabindex="5" id="cpu" class="option"><img src="images/cpu.png" alt="Computer Processor"></a></li>
+              <li><a tabindex="6" id="ram"><img src="images/ram.png" alt="Computer Memory"></a></li>
+              <li><a tabindex="7" id="mbd"><img src="images/motherboard.png" alt="Computer Motherboard"></a></li>
+              <li><a tabindex="8" id="psu"><img src="images/psu.png" alt="Computer Power Supply"></a></li>
+              <li><a tabindex="9" id="hdd"><img src="images/harddrive.png" alt="Computer Hard Drive"></a></li>
+              <li><a tabindex="10" id="gpu"><img src="images/gpu.png" alt="Computer Graphics Card"></a></li>
+            </ul>
+            <ul>
+              <li><label for="cpu">- Processor</label></li>
+              <li><label for="ram">- Memory</label></li>
+              <li><label for="mbd">- Motherboard</label></li>
+              <li><label for="psu">- Power Supply</label></li>
+              <li><label for="hdd">- Hard Drive</label></li>
+              <li><label for="gpu">- Video Card</label></li>
+            </ul>
+          </aside>
+          <a id="quiz-link" href="quiz.html">Quiz</a>
+          <aside id="information">
+            <div id="inf-info">
+              <p >Click on any part on the left hand side to learn about it!</p>
+            </div>
+            <div class="information" id="cpu-info">
+              <h3>CPU - Central Processing Unit</h3>
+              <hr>
+              <p>This is like my Monster's brains. It allows them to make decisions and decide what to do...
+                With this a computer can make decisions.
+              </p>
+              <div class="info-image">
+                <img src="images/brain-real.png" alt="A human brain.">
+              </div>
+            </div>
+            <div class="information" id="ram-info">
+              <h3>RAM - Random Access Memory</h3>
+              <hr>
+              <p>I can't have my creations forgetting everything all the time.
+                RAM is like their short-term memory. Computers need RAM to think about decisions.
+              </p>
+              <div class="info-image">
+                <img src="images/idea.png" alt="Someone having an idea.">
+              </div>
+            </div>
+            <div class="information" id="mbd-info">
+              <h3>MBD - Motherboard</h3>
+              <hr>
+              <p>The motherboard is like the skeleton of my creation. In a computer, it allows everything else to communicate and work together.
+              </p>
+              <div class="info-image">
+                <img src="images/skeleton.png" alt="Skeleton.">
+              </div>
+            </div>
+            <div class="information" id="psu-info">
+              <h3>PSU - Power Supply Unit</h3>
+              <hr>
+              <p>Like my creations need energy from food, the computer needs electricity as its food, which it gets from the PSU.
+              </p>
+              <div class="info-image">
+                <img src="images/food.png" alt="A stomach digesting.">
+              </div>
+            </div>
+            <div class="information" id="hdd-info">
+              <h3>HDD - Hard Drive Disk</h3>
+              <hr>
+              <p>This is like the long-term memory of my monsters. I don't want them to forget who I am. A computer uses this to store information you want to save for later.
+              </p>
+              <div class="info-image">
+                <img src="images/thinking.png" alt="Side profile of someone thinking.">
+              </div>
+            </div>
+            <div class="information" id="gpu-info">
+              <h3>GPU - Graphics Processing Unit</h3>
+              <hr>
+              <p>Commonly called a Video Card, the video card makes things look good on your screen. Like my creation's eyes, the better they are, the better they see.
+              </p>
+              <div class="info-image">
+                <img src="images/eyes.png" alt="A pair of eyes.">
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+  </html>
