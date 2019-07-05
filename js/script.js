@@ -12,29 +12,6 @@ $(document).ready(function(){
       this.checked=true;
     }
   });
-  // ********************AUDIO********************
-
-  // Changes load volume to 20% to not startle anyone
-  $("audio").prop("volume",0.2);
-
-  // Define array of sounds to use for interactions.
-  var buttonSounds = ["audio/enter.wav","audio/textInput.wav", "audio/cancel.wav", "audio/click.wav","audio/buzz.wav"];
-  new Audio(buttonSounds[1]).play();
-  // These sounds are called below.
-
-  // Allows muting of background Music
-  // Also toggle speaker icon from sound on to sound off
-  $(".mute").on("click",function(event){
-    if ($("audio").prop("muted")){
-      $("audio").prop("muted",false);
-      $(".mute #sound-off").css("opacity","0");
-      $(".mute #sound-on").css("opacity","1");
-    }else {
-      $("audio").prop("muted",true);
-      $(".mute #sound-on").css("opacity","0");
-      $(".mute #sound-off").css("opacity","1");
-    }
-  });
 
   // If user wants to go to home page will be prompted that all progress
   // will be lost.
@@ -46,7 +23,6 @@ $(document).ready(function(){
       localStorage.clear();
     });
     $(".modal-cancel").click(function(event){
-      new Audio(buttonSounds[2]).play();
       $(".modal2").hide();
     });
     event.preventDefault;
@@ -56,7 +32,6 @@ $(document).ready(function(){
 
   //If begin clicked, prompt for user name
   $("#begin-button").click(function(event){
-    new Audio(buttonSounds[0]).play();
     $(".modal").css({
       "display":"flex",
       "flex-direction":"column",
@@ -66,20 +41,13 @@ $(document).ready(function(){
     event.preventDefault();
   });
   $(".close").click(function(){
-    new Audio(buttonSounds[2]).play();
     $(".modal").css("display","none");
-  });
-
-  //When clicking in name input makes sound.
-  $('input[type="text"]').on('focus',function() {
-    new Audio(buttonSounds[3]).play();
   });
 
   // If no name entered, defaults to Adventurer.
   // Can not continue unless something entered.
   // Saves name and redirects.
   $("#start").click(function(){
-    new Audio(buttonSounds[0]).play();
     var userName = $("#user-name").val();
     if(userName != ""){
       localStorage.setItem("userName",userName);
@@ -105,7 +73,6 @@ $(document).ready(function(){
 
   //Parts list, show or hide info depending on active.
   $("#components a").click(function(event){
-    new Audio(buttonSounds[3]).play();
     $("#information div").removeClass("show");
     $("a").removeClass("active");
     $("label").removeClass("highlight");
@@ -137,12 +104,6 @@ $(document).ready(function(){
     }
   });
 
-  // If user clicks continue scroll down icon
-  // plays sound
-  $("#scroll-down").on("click",function(event){
-    new Audio(buttonSounds[1]).play();
-  });
-
   //Check if scrolled to bottom and add heading to parts list.
   $(window).scroll(function(){
 
@@ -155,16 +116,10 @@ $(document).ready(function(){
 
   // ********************QUIZ********************
 
-  // When selecting answers to quiz makes buzzing noise.
-  $('input[type="radio"]').on('focus',function() {
-    new Audio(buttonSounds[4]).play();
-  });
-
   // When submitting quiz will check if all questions answered.
   // If not all are, prompts user to complete quiz.
   // Calculates if pass or fail and redirects to win/lose screen.
   $("#quiz-submit").click(function(event){
-    new Audio(buttonSounds[0]).play();
     var answerCount = 0;
     var score = 0;
     $("input").each(function(event){
@@ -192,7 +147,6 @@ $(document).ready(function(){
       }
       $("#modal3").show();
       $(".modal-submit").click(function(event){
-        new Audio(buttonSounds[3]).play();
         if(score>=3){
           window.location.href = "win.html";
         }else{
@@ -200,7 +154,6 @@ $(document).ready(function(){
         }
       });
       $(".modal-cancel").click(function(event){
-        new Audio(buttonSounds[2]).play();
         $(".modal2").hide();
       })
     }
@@ -211,7 +164,6 @@ $(document).ready(function(){
 
   // Hides custom pop-up message
   $("#answer-all").click(function(event){
-    new Audio(buttonSounds[1]).play();
     $(".modal2").hide();
   });
 
