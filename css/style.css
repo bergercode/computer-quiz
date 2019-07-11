@@ -224,6 +224,10 @@ hr{
   text-align: left;
   width: 80%;
 }
+#reason {
+  text-align: center;
+  margin: auto;
+}
 
 /* ********************SOUND CONTROLS******************** */
 
