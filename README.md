@@ -1,6 +1,6 @@
 # computer-quiz
 
-A website that teaches kids the basic components of a computer.
+Come join Dr Frankenstein as he teaches children the basic components of computers.
 
 ## What is this?
 
