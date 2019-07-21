@@ -1,7 +1,7 @@
 <h1 align="center">Dr Frankenstein's Computer Quiz</h1>
 
 <div align="center">
-  <img src="images/drOptToon.png" width="200">
+  <img src="images/drWinToon.png" width="200">
 </div>
 
 Come join Dr Frankenstein as he teaches children the basic components of computers.
