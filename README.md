@@ -2,9 +2,8 @@
 
 <div align="center">
   <img src="images/drWinToon.png" width="200">
+  <p>Come join Dr Frankenstein as he teaches children the basic components of computers.</p>
 </div>
-
-Come join Dr Frankenstein as he teaches children the basic components of computers.
 
 ## What is this?
 
