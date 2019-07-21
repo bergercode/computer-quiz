@@ -10,7 +10,7 @@ The brief was to build a static website that provided education content, utilisi
 ## Tools
 
 We were required to use HTML, CSS and jQuery to build the website.
-I utalised GIMP and Inkscape to design Dr Frankenstein using images of myself in a lab coat.
+I used GIMP and Inkscape to design Dr Frankenstein using images of myself in a lab coat.
 (Computer component icons were sources from the Public Domain)
 
 
