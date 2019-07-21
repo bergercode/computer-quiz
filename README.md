@@ -1,4 +1,4 @@
-# computer-quiz
+<h1 align="center">Dr Frankenstein's Computer Quiz</h1>
 
 Come join Dr Frankenstein as he teaches children the basic components of computers.
 
