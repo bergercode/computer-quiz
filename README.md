@@ -1,5 +1,7 @@
 <h1 align="center">Dr Frankenstein's Computer Quiz</h1>
 
+![](images/drIndexToon.png)
+
 Come join Dr Frankenstein as he teaches children the basic components of computers.
 
 ## What is this?
