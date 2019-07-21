@@ -14,4 +14,9 @@ The brief was to build a static website that provided education content, utilisi
 
 We were required to use HTML, CSS and jQuery to build the website.
 I used GIMP and Inkscape to design Dr Frankenstein using images of myself in a lab coat.
-(Computer component icons were sources from the Public Domain)
+(Computer component icons were sources from the Public Domain).
+
+## Current Limitations
+
+As the users would be in a classroom environment the website was design for use on iPad size screens or larger.
+Also compatibility was limited to chrome and firefox.
