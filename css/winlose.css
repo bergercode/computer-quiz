@@ -29,124 +29,18 @@ body {
   background:rgba(0,155,0,0.9);
 }
 
-/* monsters for win animation */
-/* animation defined down with @media */
-.monster img{
-  max-width: 200px;
-	position: absolute;
-	bottom: -250px;
-	left: 0;
-	animation-timing-function: linear;
-	animation-name: monster;
-	animation-duration: 4.5s;
-	animation-iteration-count: infinite;
-  animation-fill-mode:initial;
 
-}
-
-.monster img:nth-child(1){
-  left:75%;
-  animation-delay: 1s;
-  animation-duration: 4.2s
-}
-
-.monster img:nth-child(2){
-  left:20%;
-  animation-duration: 5s;
-  animation-delay: 1.5s;
-}
-
-.monster img:nth-child(3){
-  left:55%;
-  animation-duration: 5s;
-  animation-delay: 3s;
-}
-
-.monster img:nth-child(4){
-  left:35%;
-  animation-duration: 5s;
-}
 
 #lose {
   color:white;
   background: rgba(220,50,50,0.9);
 }
 
-.drop img{
-  max-width: 10px;
-	position: absolute;
-	bottom: 100%;
-	left: 5%;
-	animation-timing-function: linear;
-	animation-name: drop;
-	animation-duration: 3.5s;
-	animation-iteration-count: infinite;
-}
 
-.drop img:nth-of-type(1){
-  left:90%;
-  animation-delay: 0.5s;
-  animation-duration: 3s;
-}
 
-.drop img:nth-of-type(2){
-  left:20%;
-  animation-delay: 1s;
-  animation-duration: 3.5s;
-}
 
-.drop img:nth-of-type(3){
-  left:70%;
-  animation-delay: 1.5s;
-  animation-duration: 3.5s;
-}
 
-.drop img:nth-of-type(4){
-  left:40%;
-  animation-delay: 2s;
-  animation-duration: 3.5s;
-}
 
-.drop img:nth-of-type(5){
-  left:60%;
-  animation-delay: 3s;
-  animation-duration: 4.5s;
-}
-
-.drop img:nth-of-type(6){
-  left:15%;
-  animation-delay: 2.5s;
-  animation-duration: 3.5s;
-}
-
-.drop img:nth-of-type(7){
-  left:75%;
-  animation-delay: 2.5s;
-  animation-duration: 3.5s;
-}
-
-.drop img:nth-of-type(8){
-  left:50%;
-  animation-delay: 0.1s;
-  animation-duration: 3.2s;
-}
-
-#drWinToon {
-  z-index: 1;
-  position: fixed;
-  bottom:0;
-  left:-2em;
-  max-height: 60vh;
-  max-width: 40vw;
-}
-
-#drFailToon {
-  position: fixed;
-  bottom:0;
-  right:-2em;
-  max-height: 80vh;
-  max-width: 35vw;
-}
 
 #score {
   color:black;
@@ -187,32 +81,9 @@ body {
 
 /* ********************MEDIA QUERIES & ANIMATION******************** */
 
-@keyframes monster {
-	0% {
-		bottom: -250px;
-	}
-	100% {
-		bottom: 100%;
-	}
-}
 
-@keyframes drop {
-  0% {
-		top: -250px;
-	}
-	100% {
-		top: 100%;
-	}
-}
 
-@media (min-width:1200px){
-  #drWinToon {
-    max-height: 80vh;
-  }
-  #drFailToon{
-    max-height: 80vh;
-  }
-}
+
 
 @media (max-width:1500px){
   #monster {
