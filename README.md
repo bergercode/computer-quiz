@@ -1,22 +1,66 @@
-<h1 align="center">Dr Frankenstein's Computer Quiz</h1>
+# Computer Hardware Basics
 
 <div align="center">
-  <img src="images/drWinToon.png" width="200">
-  <p>Come join Dr Frankenstein as he teaches children the basic components of computers.</p>
+  <img src="images/computer.png" alt="Computer Hardware Basics" width="300">
+  <p><em>A fun and interactive way for younger students to learn about computer parts.</em></p>
 </div>
 
-## What is this?
+## 📖 About The Project
 
-This is my final university assessment piece for DECO1400 – Introduction to Web Design.
-The brief was to build a static website that provided education content, utilising a fictional story as the theme. The website is an interactive learning experience where ages 10-15 get to learn about computer components. Students are guided through this experience by Dr Frankenstein and encouraged to pass a quiz in order to help the Dr bring his creations to life. We had to create various stages of the design process, including user testing, paper prototyping and stakeholder engagement. 
+This web application is designed to be an engaging educational tool for children (ages 10-15) to learn about the fundamental hardware components of a personal computer. 
 
-## Tools
+Through a playful "lab" theme, students are guided to explore different parts of a computer, understand their functions through simple analogies (like comparing the CPU to a brain or the PSU to food), and then test their knowledge in a quiz.
 
-We were required to use HTML, CSS and jQuery to build the website.
-I used GIMP and Inkscape to design Dr Frankenstein using images of myself in a lab coat.
-(Computer component icons were sources from the Public Domain).
+## 🎯 Learning Objectives
 
-## Current Limitations
+By the end of the session, students should be able to identify and describe the function of:
 
-As the users would be in a classroom environment the website was design for use on iPad size screens or larger.
-Also compatibility was limited to chrome and firefox.
+*   **CPU (Central Processing Unit)**: The "brain" that makes decisions.
+*   **RAM (Random Access Memory)**: The "short-term memory" for active tasks.
+*   **Motherboard**: The "skeleton" that connects all parts together.
+*   **PSU (Power Supply Unit)**: The "food" or energy source.
+*   **HDD/SSD (Storage)**: The "long-term memory" for saving files.
+*   **GPU (Graphics Processing Unit)**: The "eyes" that handle visuals.
+
+## 🚀 Features
+
+*   **Interactive Learning Dashboard**: Clickable components that display easy-to-understand information.
+*   **Analogy-Based Explanations**: Uses real-world concepts (brains, skeletons, food) to explain technical terms.
+*   **Knowledge Quiz**: A 5-question multiple-choice quiz to validate learning.
+*   **Instant Feedback**: Immediate results on quiz submission (Win/Loss screens).
+*   **Responsive Design**: Works well on tablets (iPad size) and larger desktop screens.
+*   **Lightweight**: Pure static site with no heavy frameworks.
+
+## 🛠️ Built With
+
+*   **HTML5**: For semantic page structure.
+*   **CSS3**: For styling, layout (Flexbox), and animations.
+*   **Vanilla JavaScript**: For user interaction, DOM manipulation, and logic (replacing previous jQuery dependencies).
+
+## 🏁 Getting Started
+
+To run this project locally:
+
+1.  **Clone the repository**
+    ```sh
+    git clone https://github.com/yourusername/computer-quiz.git
+    ```
+2.  **Open the application**
+    *   Navigate to the project folder.
+    *   Double-click `index.html` to open it in your default web browser.
+
+## 📸 Usage
+
+1.  **Home Screen**: Enter your name to begin.
+2.  **Learning Phase**: Click on the component icons (CPU, RAM, etc.) on the left to read about them.
+3.  **Quiz Phase**: Click "Quiz" when ready, answer the questions, and submit your answers.
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 👤 Author
+
+**Daniel Berger**
+*   Project for DECO1400 – Introduction to Web Design 2019
+*   Revamped in 2026
