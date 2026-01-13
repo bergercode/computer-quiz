@@ -1,81 +1,142 @@
-/* CSS for homepage of website */
+/* CSS for homepage - Game Theme */
 
 #begin-button {
+  display: inline-block;
   text-decoration: none;
-  font-size: 1.5em;
-  color: white;
-  letter-spacing: 0.1em;
-  font-weight: bold;
+  font-size: 2rem;
+  /* Big button */
+  color: var(--bg-dark);
+  letter-spacing: 0.05em;
+  font-family: var(--font-heading);
+  font-weight: 700;
   text-transform: uppercase;
-  width: 150px;
-  padding: 1em;
-  border-radius: 0.5em;
-  background: green;
-  border: none;
-}
-
-h1 {
-  font-size: 4em;
-  font-family: 'Creepster', cursive;
-  /* font-family: 'Creepster', cursive; */
-  text-shadow: 2px 3px 10px black;
+  padding: 1rem 3rem;
+  border-radius: 16px;
+  /* Chunky roundness */
+  background-color: var(--action-green);
+  border: 4px solid white;
+  transition: all 0.1s;
+  box-shadow: 0 8px 0 #2ea06d, 0 15px 20px rgba(0, 0, 0, 0.2);
+  /* 3D effect */
+  margin-top: 2rem;
+  position: relative;
+  top: 0;
 }
 
 #begin-button:hover {
   cursor: pointer;
-  box-shadow: inset 0 -3px 0 0 rgba(10, 10, 10, 0.8), 0 0 5px 0 rgba(10, 10, 10, 0.8);
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #2ea06d, 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#begin-button:active {
+  transform: translateY(8px);
+  box-shadow: 0 0 0 #2ea06d, inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  /* Inherits from style.css */
+  margin-bottom: 0.5rem;
+  color: var(--highlight-blue);
+  text-shadow: 4px 4px 0 #000;
 }
 
 #user-name {
   text-align: center;
-  font-size: 1.5em;
-  width: 200px;
-  height: 30px;
-  border-radius: 0.5em;
-  border: 3px solid black;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  border: 3px solid var(--text-secondary);
+  background: white;
+  color: var(--bg-dark);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-heading);
+}
+
+#user-name:focus {
+  border-color: var(--action-green);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(61, 237, 151, 0.4);
 }
 
 #start {
-  letter-spacing: 0.1em;
-  padding: 0.5em;
-  background: green;
-  width: 130px;
-  height: 30px;
-  border-radius: 0.5em;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: white;
+  border: 3px solid white;
+  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border-radius: 12px;
   text-transform: uppercase;
-  font-weight: bold;
+  letter-spacing: 0.05em;
+  transition: all 0.1s;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 6px 0 #701a48;
+  /* Darker pink shadow */
 }
 
 #start:hover {
-  cursor: pointer;
-  box-shadow: inset 0 -2px 0 0 rgba(10, 10, 10, 0.8), 0 0 4px 0 rgba(10, 10, 10, 0.8);
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #701a48;
+}
+
+#start:active {
+  transform: translateY(6px);
+  box-shadow: none;
 }
 
 #computer {
-  z-index: 0;
-  position: absolute;
-  right: 10px;
-  bottom: 9%;
-  width: 25vw;
+  z-index: 5;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 300px;
+  max-width: 25vw;
+  filter: drop-shadow(0 0 10px rgba(0, 204, 255, 0.5));
+  /* Glowing outline */
+  animation: float 4s ease-in-out infinite;
 }
 
-.modal label {
-  font-size: 1.5em;
+.modal {
+  text-align: center;
 }
 
-input[type="text"] {
-  font-family: 'Acme', sans-serif;
+.modal h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 2rem;
 }
 
-/* ********************MEDIA QUERIES******************** */
-
-@media (min-width:1200px) {
-  .page-overview p {
-    font-size: 1.5em;
+/* Floating animation for the computer image */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
   }
 
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
   #computer {
-    width: 350px;
-    right: 0;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 2rem;
+    width: 250px;
   }
 }

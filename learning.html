@@ -8,7 +8,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/learning.css">
-  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
@@ -46,21 +48,43 @@
       <div id="learning">
         <aside id="components">
           <p class="parts-label"><i class="fas fa-arrow-down"></i> Computer Parts <i class="fas fa-arrow-down"></i></p>
-          <ul>
-            <li><a tabindex="5" id="cpu" class="option"><img src="images/cpu.png" alt="Computer Processor"></a></li>
-            <li><a tabindex="6" id="ram"><img src="images/ram.png" alt="Computer Memory"></a></li>
-            <li><a tabindex="7" id="mbd"><img src="images/motherboard.png" alt="Computer Motherboard"></a></li>
-            <li><a tabindex="8" id="psu"><img src="images/psu.png" alt="Computer Power Supply"></a></li>
-            <li><a tabindex="9" id="hdd"><img src="images/harddrive.png" alt="Computer Hard Drive"></a></li>
-            <li><a tabindex="10" id="gpu"><img src="images/gpu.png" alt="Computer Graphics Card"></a></li>
-          </ul>
-          <ul>
-            <li><label for="cpu">- Processor</label></li>
-            <li><label for="ram">- Memory</label></li>
-            <li><label for="mbd">- Motherboard</label></li>
-            <li><label for="psu">- Power Supply</label></li>
-            <li><label for="hdd">- Hard Drive</label></li>
-            <li><label for="gpu">- Video Card</label></li>
+          <ul class="component-list">
+            <li>
+              <a tabindex="5" id="cpu" class="option">
+                <img src="images/cpu.png" alt="Computer Processor">
+                <span>Processor</span>
+              </a>
+            </li>
+            <li>
+              <a tabindex="6" id="ram">
+                <img src="images/ram.png" alt="Computer Memory">
+                <span>Memory</span>
+              </a>
+            </li>
+            <li>
+              <a tabindex="7" id="mbd">
+                <img src="images/motherboard.png" alt="Computer Motherboard">
+                <span>Motherboard</span>
+              </a>
+            </li>
+            <li>
+              <a tabindex="8" id="psu">
+                <img src="images/psu.png" alt="Computer Power Supply">
+                <span>Power Supply</span>
+              </a>
+            </li>
+            <li>
+              <a tabindex="9" id="hdd">
+                <img src="images/harddrive.png" alt="Computer Hard Drive">
+                <span>Hard Drive</span>
+              </a>
+            </li>
+            <li>
+              <a tabindex="10" id="gpu">
+                <img src="images/gpu.png" alt="Computer Graphics Card">
+                <span>Video Card</span>
+              </a>
+            </li>
           </ul>
         </aside>
         <a id="quiz-link" href="quiz.html">Quiz</a>

@@ -1,253 +1,337 @@
-/* CSS for learning page of website.  */
+/* CSS for learning page - Game Theme */
 
 section {
   min-height: 100vh;
-  background:rgb(72,85,99);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding-top: 100px;
+  /* Offsets bigger fixed nav */
+  width: 100%;
 }
 
+/* Top Intro Area */
 .blackboard {
-  z-index: 0;
-  margin-top: 1em;
+  /* Inherits from style.css */
+  margin-top: 2rem;
   text-align: left;
-  line-height: 2em;
-  width: 75%;
-  font-size: 2em;
+  background: rgba(59, 24, 95, 0.9);
+  /* Slightly more opaque */
 }
 
-.blackboard p::first-letter{
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.blackboard img {
-  position: fixed;
-  left: 0;
-  bottom:0;
-  width:17vw;
-}
-
-/* prompt for user to scroll down to continue */
+/* Scroll Down Indicator */
 #scroll-down {
-  font-size: 1.5em;
-  padding-top: 0.5em;
+  font-size: 2rem;
+  color: var(--highlight-blue);
+  display: block;
+  margin: 2rem auto;
   text-align: center;
-  height:10vh;
-  color:white;
-  display: inline-block;
-  position: relative;
-  animation:bounce 1s infinite linear;
-}
-
-/* #learning is entire learning section made up of  */
-/* #components and #information (panel) */
-
-#learning{
-  color:white;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#learning ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height:100%;
-  width: 100%;
-}
-
-#learning li {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height:16%;
-}
-
-#learning ul:nth-of-type(1){
-  align-items: center;
-}
-
-#learning ul:nth-of-type(1) a {
-  background:rgba(150,150,150,0.8);
-  padding: 0 1em;
-  box-shadow: inset 0 -3px 0 0 rgba(10,10,10,1), 2px 0 5px 0 rgba(10,10,10,1);
-  border-radius: 0.5em;
-}
-
-#learning ul:nth-of-type(1) a:hover{
-  box-shadow: inset 2px 0 10px black;
-  background:white;
-}
-
-.active {
-  box-shadow: inset 2px 0 10px black !important;
-  background:white !important;
-}
-
-.parts-label {
-  font-size: 1.2em;
-  font-family: 'Acme', sans-serif;
-  position:fixed;
-  top:1em;
-  opacity:0;
-  transition: 0.5s;
-}
-
-#components {
-  font-size: 1.5em;
-  background-color:rgb(49,52,58);
-  border-radius: 0.5em;
-  border: 10px solid rgba(202,164,114,1);
-  width:30%;
-  height:75vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  box-shadow: 2px 3px 10px black;
-}
-
-#components a{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height:100%;
-  width: auto;
+  animation: bounce 1.5s infinite;
+  /* Faster bounce */
   cursor: pointer;
+  background: none;
+  border: none;
+  text-shadow: 0 0 10px var(--highlight-blue);
+}
+
+/* Main Learning Area */
+#learning {
+  width: 95%;
+  max-width: 1400px;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  padding-bottom: 4rem;
+}
+
+/* Components List (Left Rail - HUD Style) */
+#components {
+  background: rgba(42, 9, 68, 0.8);
+  border: 3px solid var(--highlight-blue);
+  border-radius: var(--radius);
+  width: 350px;
+  flex-shrink: 0;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+#components ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* More space between buttons */
+  height: 100%;
+  justify-content: flex-start;
+}
+
+#components li {
+  width: 100%;
+}
+
+#components a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.1s;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  position: relative;
+  /* Button look */
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+#components a:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--text-secondary);
+}
+
+#components a:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+#components a.active {
+  background: var(--accent);
+  /* Pink active state */
+  color: white;
+  border-color: white;
+  box-shadow: 0 2px 0 #701a48;
+  /* Inset pressed look simulation or small shadow */
+  transform: translateY(2px);
 }
 
 #components img {
-  width:100px;
-  height: 70px;
+  width: 70px;
+  max-height: 70px;
+  margin-right: 1rem;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
 }
 
-#information {
-  position: relative;
-  box-shadow: 2px 3px 10px black;
-  background-color:rgb(73,121,89);
-  border-radius: 0.5em;
-  border: 10px solid rgba(202,164,114,1);
-  width:30%;
-  min-height:75vh;
-  font-size: 1.5em;
-}
-
-
-#information div {
-  padding:0.5em;
-  transition: 1s;
-}
-
-/* Takes user to quiz */
-#quiz-link{
+#components span {
+  font-family: var(--font-heading);
+  /* Fun font for labels */
+  font-size: 1.25rem;
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 1.5em;
+}
+
+.parts-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  /* Orange */
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Information Panel (Right Content - Screen Style) */
+#information {
+  background: rgba(42, 9, 68, 0.9);
+  border: 3px solid var(--text-secondary);
+  /* Orange border */
+  border-radius: var(--radius);
+  flex-grow: 1;
+  min-height: 600px;
+  padding: 3rem;
+  box-shadow: 0 0 20px rgba(254, 194, 96, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scanline effect */
+#information::before {
+  content: " ";
+  display: block;
   position: absolute;
-  bottom: 5%;
-  color:white;
-  text-decoration: none;
-  background: rgb(220,50,50);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  border:1px solid red;
-  height: 100px;
-  width: 100px;
-  box-shadow: inset 0 -3px 0 0 rgba(10,10,10,1), 2px 0 5px 0 rgba(10,10,10,1);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
 }
 
-#quiz-link:hover {
-  cursor: pointer;
-  color:rgba(150,150,150,1);
-  box-shadow: inset 2px 0 10px black
-}
-
-.information{
+.information {
   opacity: 0;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  transition: opacity 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  pointer-events: none;
+  z-index: 5;
 }
 
-.information img {
-  position: relative;
-  text-align: center;
-  padding-top: 1em;
-  width:120px;
+.information.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .info-image {
+  margin-bottom: 2rem;
+  background: white;
+  /* White bg for images to pop */
+  padding: 1rem;
+  border-radius: 50%;
+  /* Circle frame */
+  border: 4px solid var(--action-green);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.info-image img {
+  width: 150px;
+  max-width: 100%;
+}
+
+.information div {
+  width: 100%;
+  max-width: 700px;
   text-align: center;
 }
 
-.show{
-  opacity: 1;
+.information h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--highlight-blue);
+  text-shadow: 3px 3px 0 #000;
 }
 
-.hide{
-  opacity: 0;
+.information p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: white;
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
 }
 
-/* Modify modal */
-#home-modal {
-  font-size: 1.5em;
-  color:white;
-  z-index: 1;
+/* Quiz CTA - Big Red Button */
+#quiz-link {
   position: fixed;
-  left:38%;
-  top:30%;
-  margin: auto;
+  bottom: 2rem;
+  right: 2rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--danger);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 4px solid white;
+  box-shadow: 0 10px 0 #990000;
+  /* Deep red shadow */
+  transition: all 0.2s;
+  z-index: 100;
+  text-transform: uppercase;
   text-align: center;
-  height:200px;
+}
+
+#quiz-link:hover {
+  transform: translateY(5px);
+  box-shadow: 0 5px 0 #990000;
+}
+
+#quiz-link:active {
+  transform: translateY(10px);
+  box-shadow: none;
+}
+
+/* Modal Overrides */
+#home-modal {
+  max-width: 450px;
 }
 
 #home-modal h3 {
-
+  color: var(--danger);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-#modal-cancel {
-  background:red;
-  position:absolute;
-  right:2em;
-}
-
-#modal-submit {
-  position: absolute;
-  left:2em;
-}
-
-/* ********************MEDIA QUERIES******************** */
-
-@media (max-width:1200px) {
-  #components{
-    font-size:1.2em;
+/* Media Queries */
+@media (max-width: 1000px) {
+  #learning {
+    flex-direction: column;
   }
-  #home-modal {
-    left:33%;
-  }
-}
-@media (min-width:1200px) and (min-height:720px){
-  .information img{
-    padding-top:5em;
-    width:150px;
-  }
-  .parts-label {
-    top:1.5em;
-  }
-}
 
-@media (max-width:900px){
   #components {
-    width:35%;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+
+  #components ul {
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  #components li {
+    min-width: 160px;
+    /* Wider for label */
+  }
+
+  #components img {
+    width: 40px;
+    margin-right: 0.5rem;
+  }
+
+  #components span {
+    font-size: 1rem;
+  }
+
+  #information {
+    min-height: 500px;
+    padding: 1.5rem;
   }
 }
 
 @keyframes bounce {
-  0%   {top:0px;}
-  50%  {top:25px;}
-  100% {top:0px;}
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-8px);
+  }
 }

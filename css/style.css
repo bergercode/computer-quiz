@@ -1,252 +1,372 @@
-/* This is the master css file and give basic style for whole site */
+/* Game Theme - Playful & Modern */
+:root {
+  /* Colorful "Cyber-Fun" Palette */
+  --bg-dark: #2A0944;
+  /* Deep Purple */
+  --bg-card: #3B185F;
+  /* Lighter Purple */
+  --text-primary: #ffffff;
+  --text-secondary: #FEC260;
+  /* Soft Orange/Yellow for secondary text */
+  --accent: #A12568;
+  /* Pink/Magenta */
+  --accent-hover: #D94682;
+  /* Lighter Pink */
+
+  --highlight-blue: #00CCFF;
+  /* Electric Blue for borders/highlights */
+  --action-green: #3DED97;
+  /* Bright Green for success/start */
+  --danger: #FF2E63;
+  /* Bright Red */
+
+  --border: #A12568;
+  /* Pink Border */
+  --shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+  /* Hard shadow for game feel */
+
+  /* Fonts */
+  --font-heading: 'Fredoka', cursive;
+  --font-body: 'Nunito', sans-serif;
+
+  --radius: 20px;
+  /* Rounder corners */
+}
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
   height: 100%;
-  width:100%;
 }
 
 body {
-  /* font-family: 'Bubblegum Sans', cursive; */
-  font-family: 'Acme', sans-serif;
-  font-weight: normal;
-  position: relative;
-  background:rgb(72,85,99);
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(161, 37, 104, 0.2) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(0, 204, 255, 0.2) 0%, transparent 20%);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
+/* Navigation */
 nav {
-  z-index: 1;
   position: fixed;
-  top:0;
-  height:80px;
-  width:100%;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(42, 9, 68, 0.95);
+  border-bottom: 4px solid var(--highlight-blue);
+  z-index: 1000;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
-  padding: 2em 2em 0.5em;
   display: flex;
   list-style: none;
-}
-
-nav li {
-  padding: 0.5em;
-  z-index: 1;
+  padding-right: 2rem;
+  gap: 1.5rem;
 }
 
 nav a {
-  min-width: 150px;
-  font-size: 1.5em;
-  font-weight: bold;
-  color:white;
-  padding:0.5em;
   text-decoration: none;
-  background:orange;
-  border-radius: 0.5em;
-  text-transform: uppercase;
-  box-shadow: inset 0 -3px 0 0 rgba(10,10,10,0.8), 0 0 5px 0 rgba(10,10,10,0.8);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  background: var(--accent);
+  border-radius: 12px;
+  border: 2px solid white;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.1s;
 }
 
-nav a:hover {
-  box-shadow: inset 0 0 10px black;
-  font-weight: normal;
-  cursor: pointer;
+nav a:hover,
+nav a:focus {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3);
+  background: var(--accent-hover);
 }
 
-input:focus {
-  /* background:rgb(20,110,110); */
-  /* border:1px solid red; */
-  box-shadow: 0 0 20px yellow;
+nav a:active {
+  transform: translateY(4px);
+  box-shadow: none;
 }
 
-a:focus {
-  box-shadow: inset 0 0 10px black;
-}
-
+/* Layout & Components */
 .page-overview {
-  font-size: 1.1em;
-  background:rgb(72,85,99);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
 }
 
-.blackboard{
-  z-index: 0;
-  text-align: center;
-  padding:20px;
-  color:rgba(230,230,230,1);
-  display:flex;
+/* Card Container */
+.blackboard {
+  background: var(--bg-card);
+  border: 4px solid var(--highlight-blue);
+  border-radius: var(--radius);
+  padding: 3rem;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.2), var(--shadow);
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width:75%;
-  min-height: 60vh;
-  border: 10px solid rgba(202,164,114,1);
-  border-radius: 0.5em;
-  background-color:rgb(73,121,89);
-  box-shadow: 2px 3px 10px black;
+  text-align: center;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 10;
+  margin: 2rem 0;
 }
 
 .blackboard img {
-  width: 30vw;
-  position: absolute;
-  bottom: 0;
-  left:0;
-}
-
-.blackboard p {
-  width: 65%;
+  border-radius: 8px;
 }
 
 .highlight {
-  color:rgb(214,217,99);
+  color: var(--action-green);
+  font-weight: 800;
+  text-shadow: 0 0 5px rgba(61, 237, 151, 0.5);
 }
 
-hr{
-  border:2px solid rgba(214,217,99,0.9);
-  border-radius:10px;
-  margin:0.5em 0;
+hr {
+  border: 0;
+  border-top: 3px dashed var(--highlight-blue);
+  margin: 1.5rem 0;
+  width: 100%;
+  opacity: 0.5;
 }
 
-/* These are my customer pop up windows with mods in relative page css file */
-.modal {
-  display:none;
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  text-shadow: 3px 3px 0px var(--accent);
+}
+
+p {
+  font-size: 1.25rem;
+  color: #e0e0e0;
+  /* Slightly off-white for reading */
+  margin-bottom: 1.5rem;
+  max-width: 65ch;
+  font-weight: 600;
+  /* Nunito is rounded, thickness helps readability */
+}
+
+/* Modals */
+.modal,
+.modal2 {
+  display: none;
   position: fixed;
-  border: 5px solid rgba(202,164,114,1);
-  border-radius: 0.5em;
-  padding:0.5em;
-  height:300px;
-  width: 500px;
-  background:rgb(72,85,99);
-}
-.modal-button {
-  position: absolute;
-  bottom:1em;
-  cursor: pointer;
-  background: green;
-  padding: 0.2em 1em;
-  border-radius:0.5em;
-}
-
-.modal-button:hover{
-  box-shadow: inset 0 -2px 0 0 rgba(10,10,10,0.8), 0 0 4px 0 rgba(10,10,10,0.8);
+  background: var(--bg-card);
+  border: 4px solid var(--text-secondary);
+  /* Orange border for popups */
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+  /* Dim background */
+  z-index: 2000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .modal2 {
-  display:none;
-  position: fixed;
-  border: 5px solid rgba(202,164,114,1);
-  border-radius: 0.5em;
-  padding:0.5em;
-  height:150px;
-  width: 300px;
-  background:rgb(73,121,89);
+  max-width: 400px;
+  text-align: center;
 }
 
-.modal2 h3 {
-  font-weight: normal;
-  padding-top:1em;
+/* Close Button */
+.close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  background: var(--danger);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  /* Center the X */
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-heading);
 }
+
+.close:hover {
+  transform: scale(1.1);
+  background: #ff5c8d;
+}
+
+/* Buttons & Inputs in Modal */
+.modal-button,
+.modal-submit,
 .modal-cancel {
-  background:rgb(220,50,50);
-  position:absolute;
-  right:2em;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s;
 }
 
 .modal-submit {
-  position: absolute;
-  left:2em;
+  background: var(--action-green);
+  color: var(--bg-dark);
 }
 
-.close {
-  background:rgb(220,50,50);
-  position:absolute;
-  text-align: center;
-  top:0.5em;
-  right:0.5em;
-  cursor: pointer;
-  padding: 0.1em 0.5em;
-  border-radius: 0.5em;
-  transition: 0.1s;
+.modal-cancel {
+  background: var(--danger);
 }
 
-.close:hover{
-  color:rgb(220,50,50);
-  background:white;
+.modal-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
 }
 
-/* For about page */
-
-.go-back {
-  cursor: pointer;
+/* Common Interaction States */
+input:focus,
+a:focus {
+  outline: 3px solid var(--text-secondary);
+  outline-offset: 4px;
 }
 
-/* ********************ABOUT PAGE CSS******************** */
-
+/* About Page Specifics */
 #about-page {
-  text-align: center;
-  justify-content: space-around;
-  width: 60%;
-  font-size: 1.5em;
-}
-
-#about-page.blackboard {
-  height: 80vh;
+  text-align: left;
+  line-height: 1.8;
 }
 
 #about-page a {
-  color:pink;
+  color: var(--text-secondary);
+  /* Orange links */
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  font-weight: 800;
 }
 
-#about-page a:visited{
-  color:brown;
+#about-page a:hover {
+  border-bottom-color: var(--text-secondary);
 }
 
-#about-page a:hover{
-  color:yellow;
-}
-
-#about-page a:active{
-  color:white;
-}
-
-#references {
-  text-align: left;
-  width: 80%;
-}
+#references,
 #reason {
-  text-align: center;
-  margin: auto;
+  width: 100%;
 }
 
-/* ********************SOUND CONTROLS******************** */
+.go-back {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--highlight-blue);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
 
+.go-back:hover {
+  color: white;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* Sound Controls */
 .mute i {
-  position: relative;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .mute #sound-off {
   opacity: 0;
+  position: absolute;
+  left: 0;
 }
 
-/* ********************MEDIA QUERIES******************** */
-
-@media (max-width:1500px) {
-  .blackboard p {
-    width: 80%;
-    font-size:1.2em !important;
-    letter-spacing: 1px;
-    line-height: normal;
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
   }
 
+  .blackboard {
+    padding: 1.5rem;
+    width: 95%;
+    border-width: 3px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+}
+
+/* Animations */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes popInStatic {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Utilities used by JS */
+.hide {
+  display: none !important;
+}
+
+.show {
+  opacity: 1 !important;
 }

@@ -1,100 +1,171 @@
-/* CSS for quiz page of website */
+/* CSS for quiz page - Game Theme */
 
+/* Container overrides */
 .blackboard {
-  font-size: 1.2em;
-  background: rgb(49, 52, 58);
-  width: 61%;
-  min-height: 80vh;
+  /* Inherits card style from style.css */
+  width: 90%;
+  max-width: 800px;
+  text-align: left;
+  padding: 3rem;
+  background: rgba(42, 9, 68, 0.9);
+  border-color: var(--text-secondary);
+  /* Orange border for quiz */
+  box-shadow: 0 0 20px rgba(254, 194, 96, 0.3);
 }
 
-
-
 fieldset {
-  text-align: left;
-  border: 4px solid white;
-  padding: 2em;
-  border-radius: 0.5em;
+  border: 3px dashed var(--highlight-blue);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 legend {
-  padding: 0 1em;
-  font-size: 1.5em;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-secondary);
+  /* Orange */
+  background: var(--bg-dark);
+  border: 2px solid var(--text-secondary);
+  border-radius: 8px;
+  transform: rotate(-2deg);
+  /* Playful tilt */
+}
+
+.question {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  font-weight: 700;
+  color: white;
 }
 
 .form-element {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.form-element label {
-  padding-right: 1em;
-  cursor: pointer;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .form-item {
-  padding-bottom: 1em;
+  margin-bottom: 2rem;
 }
 
-.question {
-  font-size: 1.2em;
-}
-
-.radio {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  margin-right: 0.5em;
-  border: 1px solid white;
-  background: rgba(0, 0, 0, 0.5);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  selector: none;
-  outline: none;
-}
-
-.radio:checked {
-  background: rgb(214, 217, 99);
-}
-
-.radio:hover {
+.form-element label {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.form-element label:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--highlight-blue);
+  transform: translateX(10px);
+}
+
+/* Custom Radio Buttons */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-right: 1rem;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  flex-shrink: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+input[type="radio"]:checked {
+  border-color: var(--action-green);
+  background: var(--action-green);
+  box-shadow: 0 0 10px var(--action-green);
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #quiz-submit {
+  display: inline-block;
   text-decoration: none;
-  color: white;
-  background: green;
-  border-radius: 0.5em;
-  padding: 0.5em 1em;
+  color: var(--bg-dark);
+  background: var(--action-green);
+  border: 4px solid white;
+  border-radius: 16px;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  /* Chunky font */
+  cursor: pointer;
+  transition: all 0.1s;
+  box-shadow: 0 8px 0 #2ea06d;
+  /* Deep green 3d shadow */
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1rem;
 }
 
 #quiz-submit:hover {
-  cursor: pointer;
-  box-shadow: inset 0 -2px 0 0 rgba(10, 10, 10, 0.8), 0 0 4px 0 rgba(10, 10, 10, 0.8);
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #2ea06d;
 }
 
-#modal2 img {
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
-  width: 50px;
-  margin: auto;
+#quiz-submit:active {
+  transform: translateY(8px);
+  box-shadow: none;
 }
 
+
+#modal2,
+#modal3 {
+  text-align: center;
+}
+
+#modal2 h3,
+#modal3 h3 {
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+}
+
+/* Icons */
 form i {
-  color: orange;
+  color: var(--accent);
+  margin-right: 0.5rem;
 }
 
-/* ********************MEDIA QUERIES******************** */
-
-@media (max-width:1000px) {
-  input {
-    margin-top: 0.5em;
-    background: red;
+@media (max-width: 768px) {
+  .blackboard {
+    width: 95%;
+    padding: 1.5rem;
   }
 
-  .form-item {
-    padding-bottom: 1em;
+  fieldset {
+    padding: 1rem;
+  }
+
+  .form-element label {
+    font-size: 1rem;
   }
 }
