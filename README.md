@@ -39,6 +39,7 @@ By the end of the session, students should be able to identify and describe the 
 
 ## 🏁 Getting Started
 Live Website - https://bergercode.github.io/computer-quiz/
+
 To run this project locally:
 
 1.  **Clone the repository**
