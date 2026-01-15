@@ -7,9 +7,9 @@
 
 ## 📖 About The Project
 
-This web application is designed to be an engaging educational tool for children (ages 10-15) to learn about the fundamental hardware components of a personal computer. 
+This web application is designed to be an engaging educational tool for children & young adults, to learn about the fundamental hardware components of a personal computer. 
 
-Through a playful "lab" theme, students are guided to explore different parts of a computer, understand their functions through simple analogies (like comparing the CPU to a brain or the PSU to food), and then test their knowledge in a quiz.
+Through a "lab" theme, students are guided to explore different parts of a computer, understand their functions through simple analogies (like comparing the CPU to a brain or the RAM to short-term memory), and then test their knowledge in a quiz.
 
 ## 🎯 Learning Objectives
 
@@ -17,8 +17,8 @@ By the end of the session, students should be able to identify and describe the 
 
 *   **CPU (Central Processing Unit)**: The "brain" that makes decisions.
 *   **RAM (Random Access Memory)**: The "short-term memory" for active tasks.
-*   **Motherboard**: The "skeleton" that connects all parts together.
-*   **PSU (Power Supply Unit)**: The "food" or energy source.
+*   **Motherboard**: The "skeleton & nerves" that connects all parts together.
+*   **PSU (Power Supply Unit)**: The "digestion" or energy source.
 *   **HDD/SSD (Storage)**: The "long-term memory" for saving files.
 *   **GPU (Graphics Processing Unit)**: The "eyes" that handle visuals.
 
@@ -38,7 +38,7 @@ By the end of the session, students should be able to identify and describe the 
 *   **Vanilla JavaScript**: For user interaction, DOM manipulation, and logic (replacing previous jQuery dependencies).
 
 ## 🏁 Getting Started
-
+Live Website - https://bergercode.github.io/computer-quiz/
 To run this project locally:
 
 1.  **Clone the repository**
