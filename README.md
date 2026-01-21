@@ -64,4 +64,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **Daniel Berger**
 *   Project for DECO1400 – Introduction to Web Design 2019
-*   Revamped in 2026
+*   Revamped in 2026 with Antigravity Design
